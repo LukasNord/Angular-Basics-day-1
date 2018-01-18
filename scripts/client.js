@@ -4,7 +4,7 @@ app.controller('GithubUserController', function(){
   console.log('GithubUserController loaded');
 
   var self = this; // holds the value of this
-
+  
   self.people = [
     {
       "firstName": "Luke",
@@ -18,10 +18,12 @@ app.controller('GithubUserController', function(){
   self.newPerson = {
     
   };
-
+  
   self.createPerson = function(){
     console.log(self.newPerson);
     self.people.push(angular.copy(self.newPerson));
+    self.form = {};
+    
   };
 
 });
