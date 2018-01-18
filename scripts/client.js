@@ -15,15 +15,12 @@ app.controller('GithubUserController', function(){
     }
   ];
 
-  self.newPerson = {
-    
-  };
+  self.newPerson = {};
   
   self.createPerson = function(){
     console.log(self.newPerson);
     self.people.push(angular.copy(self.newPerson));
-    self.form = {};
-    
+    self.newPerson = {};
   };
 
 });
